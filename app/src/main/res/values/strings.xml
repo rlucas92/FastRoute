@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">FastRoute</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <!-- General String -->
+    <string name="general_search">Search</string>
+
+    <!-- Action Bar -->
+    <string name="action_settings">Settings</string>
+    <string name="action_add_place">Add Place</string>
+
+    <!-- My Places Activity -->
+    <string name="title_activity_my_places">My Places</string>
+    <string name="button_places">My Places</string>
+    <string name="title_activity_map">MapActivity</string>
+
+    <!-- Map -->
+    <string name="location">Location</string>
+
+
+</resources>

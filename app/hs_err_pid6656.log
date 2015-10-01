@@ -1,0 +1,82 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_STACK_OVERFLOW (0xc00000fd) at pc=0x000000006eebebb7, pid=6656, tid=12964
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_79-b15) (build 1.7.0_79-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x1cebb7]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000009d2e800):  JavaThread "pool-1-thread-2" [_thread_in_vm, id=12964, stack(0x000000000bc00000,0x000000000bd00000)]
+
+siginfo: ExceptionCode=0xc00000fd, ExceptionInformation=0x0000000000000001 0x000000000bcfb0a0 
+
+Registers:
+RAX=0x000000000bcfb0a0, RBX=0x0000000000000005, RCX=0x0000000000004000, RDX=0x000000000bc09160
+RSP=0x000000000bcff0a0, RBP=0x0000000000000000, RSI=0x000000000bcff0a0, RDI=0x0000000000000005
+R8 =0x0000000000000009, R9 =0x0000000009d2e800, R10=0x000000000bcff2e0, R11=0x000000000bcff3c0
+R12=0x000000000bcff3c0, R13=0x000000000bcff1e8, R14=0x000000000bcff2f0, R15=0x0000000002570840
+RIP=0x000000006eebebb7, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x000000000bcff0a0)
+0x000000000bcff0a0:   0000000009bbfa30 0000000000000000
+0x000000000bcff0b0:   0000000000000000 000000006ed8ffe3
+0x000000000bcff0c0:   0000000000000000 000000006eebf6fa
+0x000000000bcff0d0:   000000000bcff200 0000000009bbfa30
+0x000000000bcff0e0:   0000000009d2e800 0000000009d2e800
+0x000000000bcff0f0:   0000000000000000 0000000000000000
+0x000000000bcff100:   0000000000000000 000000006ed9323d
+0x000000000bcff110:   0000000009d2e800 0000000000000000
+0x000000000bcff120:   0000000000000000 0000000000000000
+0x000000000bcff130:   0000000009bbfa30 0000000000000005
+0x000000000bcff140:   0000000009d2e800 0000000000000000
+0x000000000bcff150:   0000000000000000 0000000000000000
+0x000000000bcff160:   0000000000000000 0000000008812680
+0x000000000bcff170:   0000000009d2e800 000000000bcff2f0
+0x000000000bcff180:   0000000008813fb0 000000000bcff3c0
+0x000000000bcff190:   0000000000000000 0000000008813fb0 
+
+Instructions: (pc=0x000000006eebebb7)
+0x000000006eebeb97:   48 89 6c 24 30 33 ed 66 90 e8 6b bb 07 00 ff c3
+0x000000006eebeba7:   48 63 c8 48 8b c6 48 0f af cf 48 ff c7 48 2b c1
+0x000000006eebebb7:   89 28 48 63 c3 48 3b 05 75 db 52 00 7e db 48 8b
+0x000000006eebebc7:   6c 24 30 48 8b 5c 24 38 48 8b 74 24 40 48 83 c4 
+
+
+Register to memory mapping:
+
+RAX=0x000000000bcfb0a0 is pointing into the stack for thread: 0x0000000009d2e800
+RBX=0x0000000000000005 is an unknown value
+RCX=0x0000000000004000 is an unknown value
+RDX=0x000000000bc09160 is pointing into the stack for thread: 0x0000000009d2e800
+RSP=0x000000000bcff0a0 is pointing into the stack for thread: 0x0000000009d2e800
+RBP=0x0000000000000000 is an unknown value
+RSI=0x000000000bcff0a0 is pointing into the stack for thread: 0x0000000009d2e800
+RDI=0x0000000000000005 is an unknown value
+R8 =0x0000000000000009 is an unknown value
+R9 =0x0000000009d2e800 is a thread
+R10=0x000000000bcff2e0 is pointing into the stack for thread: 0x0000000009d2e800
+R11=0x000000000bcff3c0 is pointing into the stack for thread: 0x0000000009d2e800
+R12=0x000000000bcff3c0 is pointing into the stack for thread: 0x0000000009d2e800
+R13=0x000000000bcff1e8 is pointing into the stack for thread: 0x0000000009d2e800
+R14=0x000000000bcff2f0 is pointing into the stack for thread: 0x0000000009d2e800
+R15=0x0000000002570840 is at code_begin+0 in an Interpreter codelet
+method entry point (kind = zerolocals)  [0x0000000002570840, 0x0000000002570b40]  768 bytes
+
+
+Stack: [0x000000000bc00000,0x000000000bd00000],  sp=0x000000000bcff0a0,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1cebb7]
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+

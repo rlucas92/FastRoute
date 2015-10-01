@@ -1,0 +1,82 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000006eebebb7, pid=9088, tid=9148
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_79-b15) (build 1.7.0_79-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x1cebb7]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000008879800):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=9148, stack(0x000000000a940000,0x000000000aa40000)]
+
+siginfo: ExceptionCode=0xc0000005, writing address 0x000000000aa395e0
+
+Registers:
+RAX=0x000000000aa395e0, RBX=0x0000000000000007, RCX=0x0000000000006000, RDX=0x000000000a949168
+RSP=0x000000000aa3f5e0, RBP=0x0000000000000000, RSI=0x000000000aa3f5e0, RDI=0x0000000000000007
+R8 =0x0000000000000009, R9 =0x0000000008879800, R10=0x000000000aa3f820, R11=0x000000000aa3f9b0
+R12=0x000000000aa3f9b0, R13=0x000000000aa3f728, R14=0x000000000aa3f830, R15=0x0000000002570840
+RIP=0x000000006eebebb7, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x000000000aa3f5e0)
+0x000000000aa3f5e0:   000000000200c730 0000000000000002
+0x000000000aa3f5f0:   0000000000000002 000000006ed8ffe3
+0x000000000aa3f600:   0000000000000000 000000006eebf6fa
+0x000000000aa3f610:   000000000aa3f800 000000000200c730
+0x000000000aa3f620:   0000000008879800 0000000008879800
+0x000000000aa3f630:   0000000000002380 0000000000000000
+0x000000000aa3f640:   0000000000000000 000000006ed9323d
+0x000000000aa3f650:   0000000008879800 000007fe00000000
+0x000000000aa3f660:   0000000000000000 0000000000000000
+0x000000000aa3f670:   000000000200c730 000007fe00000006
+0x000000000aa3f680:   0000000008879800 000007fe00000001
+0x000000000aa3f690:   0000000076f562c0 0000000000000001
+0x000000000aa3f6a0:   0000000008879800 0000000008682690
+0x000000000aa3f6b0:   0000000008879800 000000000aa3f830
+0x000000000aa3f6c0:   0000000008683fb0 000000000aa3f9b0
+0x000000000aa3f6d0:   0000000008879800 0000000008683fb0 
+
+Instructions: (pc=0x000000006eebebb7)
+0x000000006eebeb97:   48 89 6c 24 30 33 ed 66 90 e8 6b bb 07 00 ff c3
+0x000000006eebeba7:   48 63 c8 48 8b c6 48 0f af cf 48 ff c7 48 2b c1
+0x000000006eebebb7:   89 28 48 63 c3 48 3b 05 75 db 52 00 7e db 48 8b
+0x000000006eebebc7:   6c 24 30 48 8b 5c 24 38 48 8b 74 24 40 48 83 c4 
+
+
+Register to memory mapping:
+
+RAX=0x000000000aa395e0 is pointing into the stack for thread: 0x0000000008879800
+RBX=0x0000000000000007 is an unknown value
+RCX=0x0000000000006000 is an unknown value
+RDX=0x000000000a949168 is pointing into the stack for thread: 0x0000000008879800
+RSP=0x000000000aa3f5e0 is pointing into the stack for thread: 0x0000000008879800
+RBP=0x0000000000000000 is an unknown value
+RSI=0x000000000aa3f5e0 is pointing into the stack for thread: 0x0000000008879800
+RDI=0x0000000000000007 is an unknown value
+R8 =0x0000000000000009 is an unknown value
+R9 =0x0000000008879800 is a thread
+R10=0x000000000aa3f820 is pointing into the stack for thread: 0x0000000008879800
+R11=0x000000000aa3f9b0 is pointing into the stack for thread: 0x0000000008879800
+R12=0x000000000aa3f9b0 is pointing into the stack for thread: 0x0000000008879800
+R13=0x000000000aa3f728 is pointing into the stack for thread: 0x0000000008879800
+R14=0x000000000aa3f830 is pointing into the stack for thread: 0x0000000008879800
+R15=0x0000000002570840 is at code_begin+0 in an Interpreter codelet
+method entry point (kind = zerolocals)  [0x0000000002570840, 0x0000000002570b40]  768 bytes
+
+
+Stack: [0x000000000a940000,0x000000000aa40000],  sp=0x000000000aa3f5e0,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1cebb7]
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+
