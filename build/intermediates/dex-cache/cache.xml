@@ -2,193 +2,193 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-b9c79230139b069a0cb1f14ba89aea5b1e4d0cbc.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-a890d52ccaf2973af019c8416417d86df8dbaa15.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-dc6729228e2b1b4ab5e5c3e9f10cb300cba8a2b4.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-5fd448fb56ab93dbdf96a59dd508237913b6b241.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-8de1c211e07588ac9f05d6f2d94692cb109947ac.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-67760d0c14d59025e3d7a5a4f5191e4d82af1f66.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-89061269eab780b2a1ef2252ba1d4a5a0db822f9.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-4b5f8489e3d1e713c1655abd9843c9d92a13819c.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-f93d0cba766002042d3705bcdc72fb5cfa77dd1f.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="2e24e5f1b11170163028277de63f709e42525db4">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-34be7ac7cd86088c9cc437cf015e49f33f6746a5.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-98a9c618faf987aede08c3e15a81ecd153df35c0.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-8ab82f0e0f6b08750a943078bd8202d474c0485a.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-71977a72977afbcf3ae8813577619d225d328dc7.jar" />
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-ce82bfd6e3b1296e4c19388c0d16d19986c878f1.jar" />
     </item>
     <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-3a82ebf37d736afa8d3b097f5e59aca7a4c1151d.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-0327eb6c3cdecf24e89fd1c80f36001d21521a25.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-35732f813cb35520f9b73f0b2c8ab69d285213e8.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-9d32dd7be19e019de3343e88b0773e22726a90f9.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-56955de8b37070cd8bc949712c8eefe5de087fbb.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.8.0\jars\classes.jar"
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.8.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="130b32ed466fa0f63efd4c7d6250ccd2ed506790">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-b9aa14348b885f501e73216c5a49436d57484639.jar" />
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-4682d2a3f975eaad415ccc9d071c106ea6a6230e.jar" />
     </item>
     <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-f0d63c5306dec1f1758e93a7792a218994510a31.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-bedfece2741db15179549737bf5f2037166054d4.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-e4c661109ad96be061f8401ec3388894f0d3e3c0.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\7.8.0\jars\classes.jar"
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\7.8.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="b99f0b78bbcb76b915bc6529a83b65d4d46990dd">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-24d2132820cfbe9643d8591827d52ab68b6387ec.jar" />
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-1c627009d9cc6a8333607013f99246a8f90fed08.jar" />
     </item>
     <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-c18e6ea74eb90f8c75cceff97033944b69bac67d.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-4deaeaf7986f717080ccd7a8d8e1cc9c6c3d8db6.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-046132aa2f04e9fa35a2df5ffc8dea5a6d5c36f0.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-81fbbaaf91aa5a1b8813d83f22424eaabdc412ab.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-15bf82523b138044ac0e4b9c99c48d5b6ee9317b.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-ca85ebe2e99f02d926a9a28b57c971deab813148.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-7b331b85f93a389aa5385a8eea71dd8a43fe4871.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-d12bb5fadb86377cf81c51881b8d351711823136.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-a15b8f614101ca91d161e36ef81a642a254064f0.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-301b0ab58ee7bda5b279822f84979fb75c23873c.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-fc1b6470229199253c249b06a1d388a13eb9226d.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2e24e5f1b11170163028277de63f709e42525db4">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-ccb58683f262d36a997b0210d0169d051ff5e3c0.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-b064c7bcb5ff7283d8d980b48df9b5a1c553a446.jar" />
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-44506b3a0f6f43f775985f10b280bd04d6dbd5fd.jar" />
     </item>
     <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.8.0\jars\classes.jar"
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-17af5b46c0d6d694f2c9f6732bc7a4e15a61dcf5.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-5ff4ecba1c54fc81a4f8e051106f84deb18ee10c.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-4098d201006ec16aa6edea0ca213b2c5d31e4364.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-d05fb92da71ce082605eedff5a90740bfdd62870.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-a84537bae83a2975074d556cc6eb935df12fefaa.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.8.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="edea92852b40eee716e910af8dad9eeaa58fb0e1">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-d28050c4b80e12b5b890b1bbf19ca43ccfc9db39.jar" />
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-23f0b9242984705a4202e21397d2558f3c2b17bf.jar" />
     </item>
     <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-2f43f58a9bd0108a5159a021bedb06fca88ec38c.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.8.0\jars\classes.jar"
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.8.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="98137c4d12c50923f5809852b1ef4d1c4e162081">
-        <dex dex="C:\Users\rlucas\AndroidStudioProjects\FastRoute\app\build\intermediates\pre-dexed\debug\classes-6702badc94ad0ec205f43fc8de8d50fea1456553.jar" />
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-e99bf3b2c63bfaa45a72a641051de9e285db5b4b.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-46c4aa3b9ba5fa317cf4768d8730742995ab01ad.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-dc7bcc8c5a26a249e315b170a804c61a5cb1d7cb.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-4aed0f70b02ddf6b2678c33ad27eebf30d21ec04.jar" />
+    </item>
+    <item
+        jar="C:\Users\RJ\Android\FastRoute\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
+        <dex dex="C:\Users\RJ\Android\FastRoute\app\build\intermediates\pre-dexed\debug\classes-8c48bb74b3f4a5a408ced09b350d7156329f17f9.jar" />
     </item>
 
 </items>

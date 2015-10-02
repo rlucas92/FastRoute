@@ -5,6 +5,9 @@
 
     <!-- General String -->
     <string name="general_search">Search</string>
+    <string name="general_yes">Yes</string>
+    <string name="general_no">No</string>
+    <string name="geneneral_confirm">Confirm</string>
 
     <!-- Action Bar -->
     <string name="action_settings">Settings</string>
@@ -17,6 +20,7 @@
 
     <!-- Map -->
     <string name="location">Location</string>
+    <string name="map_dialog_confirm">Are you sure you want to add the selected location?</string>
 
 
 </resources>
