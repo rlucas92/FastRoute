@@ -1,5 +1,6 @@
 package com.rlucas.fastroute;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
@@ -26,12 +27,14 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.rlucas.fastroute.com.rlucas.fastroute.placesautocomplete.PlaceJSONParser;
 
@@ -49,7 +52,8 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
-        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+        GoogleMap.OnMapClickListener, GoogleMap.OnMarkerClickListener {
 
     //Constants
     private static final int REQUEST_RESOLVE_ERROR = 1001;   // Request code to use when launching the resolution activity
@@ -62,8 +66,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     private GoogleApiClient apiClient;
     private boolean resolvingError = false;
     private LatLng latLng;
-    private MarkerOptions markerOptions;
-    private ParserTask parserTask;
     private PlacesTask placesTask;
 
     //UI Objects
@@ -117,6 +119,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     @Override
     public void onMapReady(GoogleMap map) {
         gMap = map;
+        gMap.setOnMapClickListener(this);
+        gMap.setOnMarkerClickListener(this);
     }
 
     @Override
@@ -245,7 +249,24 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         }
     }
 
-    /***************************************************************************************
+    @Override
+    public void onMapClick(LatLng latLng) {
+        gMap.addMarker(new MarkerOptions()
+                    .position(latLng)
+                    .draggable(false)
+                    .title("Tap to select location"));
+        gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, INITIAL_CAMERA_ZOOM));
+    }
+
+    public boolean onMarkerClick(Marker marker) {
+        //return false to show this behavior with default behavior (show info window)
+        DialogFragment dialog = new MapAlertDialogFragment();
+        dialog.show(getFragmentManager(), "confirm add place");
+
+        return false;
+    }
+
+    /**************************************************************************************
      *     Dialog
      **************************************************************************************/
 
@@ -305,6 +326,31 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         }
     }
 
+    public static class MapAlertDialogFragment extends DialogFragment {
+
+        public static MapAlertDialogFragment newInstance() {
+            MapAlertDialogFragment frag = new MapAlertDialogFragment();
+            return frag;
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle bundle) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(R.string.geneneral_confirm)
+                    .setMessage(R.string.map_dialog_confirm)
+                    .setPositiveButton(R.string.general_yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            //Confirm Add Here
+                        }
+                    })
+                    .setNegativeButton(R.string.general_no, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            //Do nothing
+                        }
+                    });
+            return builder.create();
+        }
+    }
     // An AsyncTask class for accessing the GeoCoding Web Service
     private class GeocoderTask extends AsyncTask<String, Void, List<Address>> {
 
@@ -345,7 +391,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                         address.getMaxAddressLineIndex() > 0 ? address.getAddressLine(0) : "",
                         address.getCountryName());
 
-                markerOptions = new MarkerOptions();
+                MarkerOptions markerOptions = new MarkerOptions();
                 markerOptions.position(latLng);
                 markerOptions.title(addressText);
 
@@ -406,7 +452,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             super.onPostExecute(result);
 
             // Creating ParserTask
-            parserTask = new ParserTask();
+            ParserTask parserTask = new ParserTask();
 
             // Starting Parsing the JSON string returned by Web Service
             parserTask.execute(result);
