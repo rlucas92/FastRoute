@@ -1,22 +1,19 @@
 package com.rlucas.fastroute;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Address;
-import android.location.Geocoder;
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-
-import java.io.IOException;
-import java.util.List;
 
 public class EditPlaceActivity extends AppCompatActivity {
 
@@ -31,10 +28,24 @@ public class EditPlaceActivity extends AppCompatActivity {
 
         //Get data from map activity
         Intent intent = getIntent();
-        latLng = intent.getParcelableExtra(Constants.EXTRA_MAP_LATLNG);
-        address = intent.getParcelableExtra(Constants.EXTRA_MAP_ADDRESS);
+        this.latLng = intent.getParcelableExtra(Constants.EXTRA_MAP_LATLNG);
+        this.address = intent.getParcelableExtra(Constants.EXTRA_MAP_ADDRESS);
 
         //Fill in fields
+        EditText addressET = (EditText)findViewById(R.id.editText_address);
+        addressET.setText(address.getAddressLine(0));
+        addressET.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus)
+                    onAddressTextSelected();
+            }
+        });
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        this.address = intent.getParcelableExtra(Constants.EXTRA_MAP_ADDRESS);
         EditText addressET = (EditText)findViewById(R.id.editText_address);
         addressET.setText(address.getAddressLine(0));
     }
@@ -59,5 +70,42 @@ public class EditPlaceActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onAddressTextSelected() {
+        DialogFragment dialog = new EditPlaceAlertDialogFragment();
+        dialog.show(getFragmentManager(), "confirmAddressUpdate");
+    }
+
+    public void updateAddress() {
+        Intent intent = new Intent(this, MapActivity.class);
+        intent.putExtra(Constants.EXTRA_MAP_LATLNG, this.latLng);
+        startActivity(intent);
+    }
+
+    public static class EditPlaceAlertDialogFragment extends DialogFragment {
+
+        public static EditPlaceAlertDialogFragment newInstance() {
+            EditPlaceAlertDialogFragment frag = new EditPlaceAlertDialogFragment();
+            return frag;
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle bundle) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(getResources().getString(R.string.geneneral_confirm))
+                    .setMessage(R.string.alertDialog_update_address)
+                    .setPositiveButton(R.string.general_yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            ((EditPlaceActivity) getActivity()).updateAddress();
+                        }
+                    })
+                    .setNegativeButton(R.string.general_no, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            //Do nothing
+                        }
+                    });
+            return builder.create();
+        }
     }
 }

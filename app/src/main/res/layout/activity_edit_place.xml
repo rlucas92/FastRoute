@@ -34,17 +34,14 @@
         android:layout_alignParentStart="true"
         android:layout_below="@id/textView_name"
         android:padding="10dp"
-        android:labelFor="@id/editText_name"/>
+        android:labelFor="@+id/editText_address"/>
 
     <EditText
-        android:id="@+id/editText_address"
+        android:id="@id/editText_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/textView_address"
         android:layout_below="@id/editText_name"
         android:padding="10dp"/>
-
-
-
 
 </RelativeLayout>

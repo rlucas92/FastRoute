@@ -68,6 +68,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     private LatLng selectedLatLng;
     private PlacesTask placesTask;
     private Marker selectedLoc;
+    private boolean mapReady = false;
+    private boolean apiConnected = false;
 
     //UI Objects
     private GoogleMap gMap;
@@ -105,17 +107,16 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
         resolvingError = savedInstanceState != null && savedInstanceState.getBoolean(STATE_RESOLVING_ERROR, false);
+        selectedLatLng = getIntent().getParcelableExtra(Constants.EXTRA_MAP_LATLNG);
 
-        //Build Google API client
         buildGoogleApiClient();
 
-        //Get map
         MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        //Set up autocomplete
         setUpAutoComplete();
     }
+
 
     @Override
     public void onMapReady(GoogleMap map) {
@@ -134,18 +135,28 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     protected void onStop() {
-        apiClient.disconnect();
         super.onStop();
+        apiClient.disconnect();
+        finish();
     }
 
     @Override
     public void onConnected(Bundle bundle) {
         Log.i("MapActivity", "Connected to Google API Client");
-        //Set up map
         gMap.setMyLocationEnabled(true);
-        Location currentLocation = LocationServices.FusedLocationApi.getLastLocation(apiClient);
-        LatLng latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
-        gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, INITIAL_CAMERA_ZOOM));
+        if(this.selectedLatLng != null) {
+            selectedLoc = gMap.addMarker(new MarkerOptions()
+                    .position(selectedLatLng)
+                    .draggable(false)
+                    .title(getResources().getString(R.string.map_marker_title)));
+            selectedLoc.showInfoWindow();
+            gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(selectedLatLng, INITIAL_CAMERA_ZOOM));
+        }
+        else {
+            Location currentLocation = LocationServices.FusedLocationApi.getLastLocation(apiClient);
+            LatLng latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+            gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, INITIAL_CAMERA_ZOOM));
+        }
     }
 
     /***************************************************************************************

@@ -52,8 +52,7 @@
 
         <activity
             android:name=".MapActivity"
-            android:label="@string/title_activity_map"
-            android:parentActivityName=".MyPlacesActivity" >
+            android:label="@string/title_activity_map">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.rlucas.fastroute.MyPlacesActivity" />
@@ -61,6 +60,7 @@
 
         <activity
             android:name=".EditPlaceActivity"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_edit_place" >
         </activity>
 

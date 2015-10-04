@@ -32,6 +32,7 @@
     <string name="textView_name">Name: </string>
     <string name="editText_name_hint">Enter name for place</string>
     <string name="textView_address">Address: </string>
+    <string name="alertDialog_update_address">Return to map and change location?</string>
 
 
 </resources>
