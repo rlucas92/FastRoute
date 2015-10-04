@@ -27,7 +27,7 @@
             android:layout_toStartOf="@id/btn_map_search" />
         -->
 
-        <com.rlucas.fastroute.com.rlucas.fastroute.placesautocomplete.CustomAutoCompleteTextView
+        <com.rlucas.fastroute.placeautocomplete.CustomAutoCompleteTextView
             android:id="@+id/atv_places"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

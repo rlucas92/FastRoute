@@ -8,6 +8,10 @@
     <string name="general_yes">Yes</string>
     <string name="general_no">No</string>
     <string name="geneneral_confirm">Confirm</string>
+    
+    <!-- Errors -->
+    <string name="error_service_unavailable">Service currently unavilable.</string>
+    <string name="error_invalid_lat_long">Invalid lattitude and longitude.</string>
 
     <!-- Action Bar -->
     <string name="action_settings">Settings</string>

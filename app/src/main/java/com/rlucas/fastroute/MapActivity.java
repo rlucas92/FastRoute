@@ -11,9 +11,9 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.os.ResultReceiver;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -21,24 +21,21 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AutoCompleteTextView;
-import android.widget.EditText;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.rlucas.fastroute.com.rlucas.fastroute.placesautocomplete.PlaceJSONParser;
+import com.rlucas.fastroute.placeautocomplete.PlaceJSONParser;
+import com.rlucas.fastroute.services.FetchAddressService;
 
 import org.json.JSONObject;
 
@@ -68,7 +65,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     //Other objects
     private GoogleApiClient apiClient;
     private boolean resolvingError = false;
-    private LatLng latLng;
+    private LatLng selectedLatLng;
     private PlacesTask placesTask;
     private Marker selectedLoc;
 
@@ -225,12 +222,31 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     }
 
     public void confirmAdd() {
-        Intent intent = new Intent(this, EditPlaceActivity.class);
-        intent.putExtra("lat", latLng.latitude);
-        intent.putExtra("long", latLng.longitude);
-        intent.putExtra("address", new Address(Locale.getDefault()));
-        startActivity(intent);
+        Log.i("MapActivity", "Add confirmed");
+        //Get Address from LatLng
+        Intent geoIntent = new Intent(this, FetchAddressService.class);
+        geoIntent.putExtra(Constants.EXTRA_MAP_LATLNG, selectedLatLng);
+        geoIntent.putExtra(Constants.EXTRA_MAP_RESULTRECEIVER, new ResultReceiver(new Handler()) {
+            @Override
+            protected void onReceiveResult(int resultCode, Bundle resultData) {
+                if (resultCode == Constants.RESULTCODE_SUCCESS) {
+                    startEditPlaceActivity((Address) resultData.get(Constants.BUNDLE_MAP_ADDRESS));
+                } else {
+                    Log.e("MapActivity.confirmAdd", "Error returned from geocoder:\n"
+                            + resultData.getString(Constants.BUNDLE_RESULTMESSAGE));
+                }
+            }
+        });
+        startService(geoIntent);
+    }
 
+    public void startEditPlaceActivity(Address address){
+        Log.i("MapActivity", "About to start Edit Place activity");
+        //Start Edit Place Activity
+        Intent intent = new Intent(this, EditPlaceActivity.class);
+        intent.putExtra(Constants.EXTRA_MAP_ADDRESS, address);
+        intent.putExtra(Constants.EXTRA_MAP_LATLNG, selectedLatLng);
+        startActivity(intent);
     }
 
     /***************************************************************************************
@@ -264,7 +280,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onMapClick(LatLng latLng) {
-        this.latLng = latLng;
+        this.selectedLatLng = latLng;
         if(selectedLoc != null) {
             selectedLoc.remove();
         }
@@ -443,7 +459,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                 places = placeJsonParser.parse(jObject);
 
             }catch(Exception e){
-                Log.d("Exception",e.toString());
+                Log.d("Exception", e.toString());
             }
             return places;
         }
@@ -459,18 +475,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
             // Setting the adapter
             atvPlaces.setAdapter(adapter);
-        }
-    }
-
-    public class FetchAddressService extends IntentService {
-
-        public FetchAddressService() {
-            super("");
-        }
-
-        @Override
-        protected void onHandleIntent(Intent intent) {
-
         }
     }
 }

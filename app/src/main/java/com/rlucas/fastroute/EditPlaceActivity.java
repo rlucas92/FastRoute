@@ -21,17 +21,22 @@ import java.util.List;
 public class EditPlaceActivity extends AppCompatActivity {
 
     private LatLng latLng;
+    private Address address;
 
     @Override
+    //Created by MapActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_place);
 
-        //Set Address
+        //Get data from map activity
         Intent intent = getIntent();
-        latLng = new LatLng(intent.getDoubleExtra("lat", 0),
-                intent.getDoubleExtra("long", 0));
+        latLng = intent.getParcelableExtra(Constants.EXTRA_MAP_LATLNG);
+        address = intent.getParcelableExtra(Constants.EXTRA_MAP_ADDRESS);
 
+        //Fill in fields
+        EditText addressET = (EditText)findViewById(R.id.editText_address);
+        addressET.setText(address.getAddressLine(0));
     }
 
     @Override
@@ -55,11 +60,4 @@ public class EditPlaceActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void setAddressField(Address address) {
-        EditText addressET = (EditText)findViewById(R.id.editText_address);
-        addressET.setText(address.toString());
-
-    }
-
 }

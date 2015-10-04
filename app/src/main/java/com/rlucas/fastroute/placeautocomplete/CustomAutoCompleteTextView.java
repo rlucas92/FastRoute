@@ -1,4 +1,4 @@
-package com.rlucas.fastroute.com.rlucas.fastroute.placesautocomplete;
+package com.rlucas.fastroute.placeautocomplete;
 
 import java.util.HashMap;
 

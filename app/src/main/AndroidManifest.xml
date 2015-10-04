@@ -65,7 +65,7 @@
         </activity>
 
         <service
-            android:name=".MapActivity$FetchAddressService"
+            android:name=".services.FetchAddressService"
             android:exported="false"/>
 
         <meta-data
