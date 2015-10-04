@@ -3,6 +3,7 @@ package com.rlucas.fastroute;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.app.IntentService;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -10,6 +11,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.AsyncTask;
+import android.os.ResultReceiver;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,6 +52,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
@@ -67,6 +70,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     private boolean resolvingError = false;
     private LatLng latLng;
     private PlacesTask placesTask;
+    private Marker selectedLoc;
 
     //UI Objects
     private GoogleMap gMap;
@@ -220,6 +224,15 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         return data;
     }
 
+    public void confirmAdd() {
+        Intent intent = new Intent(this, EditPlaceActivity.class);
+        intent.putExtra("lat", latLng.latitude);
+        intent.putExtra("long", latLng.longitude);
+        intent.putExtra("address", new Address(Locale.getDefault()));
+        startActivity(intent);
+
+    }
+
     /***************************************************************************************
      *     Callbacks
      **************************************************************************************/
@@ -251,10 +264,15 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onMapClick(LatLng latLng) {
-        gMap.addMarker(new MarkerOptions()
-                    .position(latLng)
-                    .draggable(false)
-                    .title("Tap to select location"));
+        this.latLng = latLng;
+        if(selectedLoc != null) {
+            selectedLoc.remove();
+        }
+        selectedLoc = gMap.addMarker(new MarkerOptions()
+                .position(latLng)
+                .draggable(false)
+                .title(getResources().getString(R.string.map_marker_title)));
+        selectedLoc.showInfoWindow();
         gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, INITIAL_CAMERA_ZOOM));
     }
 
@@ -336,11 +354,11 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         @Override
         public Dialog onCreateDialog(Bundle bundle) {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle(R.string.geneneral_confirm)
+            builder.setTitle(getResources().getString(R.string.geneneral_confirm))
                     .setMessage(R.string.map_dialog_confirm)
                     .setPositiveButton(R.string.general_yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            //Confirm Add Here
+                            ((MapActivity)getActivity()).confirmAdd();
                         }
                     })
                     .setNegativeButton(R.string.general_no, new DialogInterface.OnClickListener() {
@@ -349,58 +367,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                         }
                     });
             return builder.create();
-        }
-    }
-    // An AsyncTask class for accessing the GeoCoding Web Service
-    private class GeocoderTask extends AsyncTask<String, Void, List<Address>> {
-
-        @Override
-        protected List<Address> doInBackground(String... locationName) {
-            // Creating an instance of Geocoder class
-            Geocoder geocoder = new Geocoder(getBaseContext());
-            List<Address> addresses = null;
-
-            try {
-                // Getting a maximum of 3 Address that matches the input text
-                addresses = geocoder.getFromLocationName(locationName[0], 3);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return addresses;
-        }
-
-        @Override
-        protected void onPostExecute(List<Address> addresses) {
-
-            if(addresses==null || addresses.size()==0){
-                Toast.makeText(getBaseContext(), "No Location found", Toast.LENGTH_SHORT).show();
-            }
-
-            // Clears all the existing markers on the map
-            gMap.clear();
-
-            // Adding Markers on Google Map for each matching address
-            for(int i=0;i<addresses.size();i++){
-
-                Address address = (Address) addresses.get(i);
-
-                // Creating an instance of GeoPoint, to display in Google Map
-                latLng = new LatLng(address.getLatitude(), address.getLongitude());
-
-                String addressText = String.format("%s, %s",
-                        address.getMaxAddressLineIndex() > 0 ? address.getAddressLine(0) : "",
-                        address.getCountryName());
-
-                MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.position(latLng);
-                markerOptions.title(addressText);
-
-                gMap.addMarker(markerOptions);
-
-                // Locate the first location
-                if(i==0)
-                    gMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-            }
         }
     }
 
@@ -493,6 +459,18 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
             // Setting the adapter
             atvPlaces.setAdapter(adapter);
+        }
+    }
+
+    public class FetchAddressService extends IntentService {
+
+        public FetchAddressService() {
+            super("");
+        }
+
+        @Override
+        protected void onHandleIntent(Intent intent) {
+
         }
     }
 }

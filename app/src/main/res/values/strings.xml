@@ -21,6 +21,13 @@
     <!-- Map -->
     <string name="location">Location</string>
     <string name="map_dialog_confirm">Are you sure you want to add the selected location?</string>
+    <string name="map_marker_title">Tap to select location</string>
+
+    <!-- Edit Place Activity-->
+    <string name="title_activity_edit_place">Edit Place</string>
+    <string name="textView_name">Name: </string>
+    <string name="editText_name_hint">Enter name for place</string>
+    <string name="textView_address">Address: </string>
 
 
 </resources>

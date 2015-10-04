@@ -4,19 +4,18 @@
 
     <permission
         android:name="in.wptrafficanalyzer.locationgeocodingv2.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature"/>
+        android:protectionLevel="signature" />
 
-    <uses-permission android:name="in.wptrafficanalyzer.locationgeocodingv2.permission.MAPS_RECEIVE"/>
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="in.wptrafficanalyzer.locationgeocodingv2.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
-        android:required="true"/>
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -32,6 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
@@ -40,6 +40,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".HomeScreenActivity" />
         </activity>
+
         <activity
             android:name=".MyPlacesActivity"
             android:label="@string/title_activity_my_places"
@@ -58,9 +59,20 @@
                 android:value="com.rlucas.fastroute.MyPlacesActivity" />
         </activity>
 
+        <activity
+            android:name=".EditPlaceActivity"
+            android:label="@string/title_activity_edit_place" >
+        </activity>
+
+        <service
+            android:name=".MapActivity$FetchAddressService"
+            android:exported="false"/>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBhSfDxsNJFOLQtpK-SMkqOS0QrbDlsCg4" />
+
+
     </application>
 
 </manifest>
